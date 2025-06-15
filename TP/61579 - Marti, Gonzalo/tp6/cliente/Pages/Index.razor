@@ -49,6 +49,17 @@
         </div>
     </div>
 }
+@if (mostrarModal && productoSeleccionado != null)
+{
+    <div class="modal-overlay">
+        <div class="modal-content">
+            <h3>¿Agregar <b>@productoSeleccionado.Nombre</b> al carrito?</h3>
+            <button class="btn-confirmar" @onclick="ConfirmarAgregar">Sí, agregar</button>
+            <button class="btn-cancelar" @onclick="Cancelar">Cancelar</button>
+        </div>
+    </div>
+}
+
 
 @code {
     private List<Producto> productos = new();
